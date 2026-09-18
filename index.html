@@ -2328,7 +2328,7 @@
       <rect x="14" y="4" width="4" height="16"></rect>
     </svg>
   </button>
-  <audio id="bg-music" loop src="music.webm"></audio>
+  <audio id="bg-music" loop autoplay src="music.webm"></audio>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
@@ -2986,6 +2986,18 @@ END:VCALENDAR`;
     const iconPlay = document.getElementById('icon-play');
     const iconPause = document.getElementById('icon-pause');
     let playing = false;
+    
+    /* Try to autoplay music on page load */
+    music.play().then(() => {
+      playing = true; 
+      player.classList.add('playing');
+      iconPlay.style.display = 'none'; 
+      iconPause.style.display = 'block';
+      if (footerMusicBtn) footerMusicBtn.textContent = '❚❚ Pause Music';
+    }).catch(() => { 
+      /* Autoplay blocked by browser - will play when user clicks "Open Invitation" */
+    });
+    
     function toggleMusic() {
       if (!playing) {
         music.play().then(() => {
