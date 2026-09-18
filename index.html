@@ -1,0 +1,2999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Rahul &amp; Yukta — 26.12.2026</title>
+  <meta name="description" content="Rahul Suresh Ragav &amp; Yukta Jain are getting married — 26th December 2026, Vijaya Convention Centre, Thiruvalla, Kerala">
+
+  <!-- Open Graph / WhatsApp / Facebook link preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rahul-yukta.wedding/">
+  <meta property="og:title" content="Rahul &amp; Yukta — 26.12.2026">
+  <meta property="og:description"
+    content="Together with our families, we cordially invite you to join our wedding — 26th December 2026, Vijaya Convention Centre, Thiruvalla, Kerala">
+  <meta property="og:image" content="https://rahul-yukta.wedding/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rahul &amp; Yukta — 26.12.2026">
+  <meta name="twitter:description"
+    content="Together with our families, we cordially invite you to join our wedding — 26th December 2026, Vijaya Convention Centre, Thiruvalla, Kerala">
+  <meta name="twitter:image" content="https://rahul-yukta.wedding/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Great+Vibes&family=Poppins:wght@200;300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --ivory: #FFFBF3;
+      --cream: #F6EDE2;
+      --cream-2: #F0E2CE;
+      --blush: #F3DEDD;
+      --peach: #F1CDA8;
+      --champagne: #C9A55C;
+      --champagne-2: #B8934A;
+      --soft-gold: #E9D6A6;
+      --warm-white: #FFFDF8;
+      --olive: #8C1F32;
+      --olive-dark: #5E1220;
+      --green-accent: #7C8A5E;
+      --ink: #3A2620;
+      --ink-soft: #6b5750;
+      --line: rgba(179, 148, 80, 0.28);
+      --glass: rgba(255, 253, 248, 0.55);
+      --glass-strong: rgba(255, 253, 248, 0.72);
+      --glass-border: rgba(201, 165, 92, 0.35);
+      --shadow: 0 20px 60px rgba(90, 40, 30, 0.14);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: auto;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--ivory);
+      color: var(--ink);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--soft-gold);
+      color: var(--ink);
+    }
+
+    h1,
+    h2,
+    h3,
+    .serif {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+    }
+
+    .script {
+      font-family: 'Great Vibes', cursive;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* ===================== INTRO VIDEO — UNCHANGED ===================== */
+    #intro-screen {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 1.3s ease;
+    }
+
+    #intro-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #open-invitation {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 8px 20px;
+      border-radius: 30px;
+      background: rgba(255, 253, 248, 0.18);
+      border: 1px solid rgba(255, 253, 248, 0.55);
+      color: #fffdf8;
+      font-size: 11px;
+      letter-spacing: 1.2px;
+      backdrop-filter: blur(6px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .6s ease, background .3s ease, transform .3s ease;
+      text-transform: uppercase;
+      touch-action: manipulation;
+      z-index: 3;
+    }
+
+    #open-invitation.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #open-invitation:hover,
+    #open-invitation:active {
+      background: rgba(255, 253, 248, 0.32);
+      transform: translateX(-50%) scale(0.97);
+    }
+
+    #intro-screen.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #intro-tap {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+
+    /* ===================== GLOBAL DECOR LAYERS ===================== */
+    #cursor-glow {
+      position: fixed;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 5;
+      background: radial-gradient(circle, rgba(201, 165, 92, 0.16) 0%, rgba(201, 165, 92, 0) 70%);
+      transform: translate(-50%, -50%);
+      transition: opacity .4s ease;
+      will-change: transform;
+    }
+
+    @media (hover:none) and (pointer:coarse) {
+      #cursor-glow {
+        display: none;
+      }
+    }
+
+    #petal-field {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 4;
+      overflow: hidden;
+    }
+
+    .petal {
+      position: absolute;
+      top: -40px;
+      font-size: 16px;
+      color: var(--champagne);
+      opacity: .5;
+      filter: drop-shadow(0 2px 4px rgba(120, 90, 30, 0.15));
+      animation: fall linear infinite;
+      will-change: transform;
+      contain: layout style;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-5vh) translateX(0) rotate(0deg);
+      }
+
+      100% {
+        transform: translateY(105vh) translateX(var(--drift, 40px)) rotate(360deg);
+      }
+    }
+
+    #particles {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .spark {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--soft-gold);
+      opacity: .5;
+      animation: twinkle 4s ease-in-out infinite;
+      will-change: opacity, transform;
+    }
+
+    @keyframes twinkle {
+
+      0%,
+      100% {
+        opacity: .15;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .8;
+        transform: scale(1.6);
+      }
+    }
+
+    /* golden particle burst (scratch reveal) */
+    .burst-particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff6de, var(--champagne));
+      pointer-events: none;
+      z-index: 20;
+    }
+
+    /* ===================== SITE WRAPPER ===================== */
+    #site {
+      opacity: 0;
+      background:
+        radial-gradient(ellipse at top, rgba(233, 214, 166, 0.35), transparent 60%),
+        linear-gradient(180deg, var(--ivory), var(--cream));
+    }
+
+    .section {
+      position: relative;
+      padding: 140px 6vw;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .marble-bg {
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.5), transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(255, 255, 255, 0.4), transparent 45%),
+        linear-gradient(160deg, var(--cream) 0%, var(--ivory) 45%, var(--cream-2) 100%);
+    }
+
+    /* image-backed sections */
+    .bg-section {
+      color: var(--ink);
+    }
+
+    .bg-layer {
+      position: absolute;
+      inset: -4%;
+      z-index: 0;
+      background-size: cover;
+      background-position: center;
+      will-change: transform;
+      animation: slowzoom 36s ease-in-out infinite alternate;
+    }
+
+    #hero-bg {
+      background-size: cover !important;
+    }
+
+    @keyframes slowzoom {
+      0% {
+        transform: scale(1);
+      }
+
+      100% {
+        transform: scale(1.08);
+      }
+    }
+
+    .light-rays {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      opacity: .4;
+      background: conic-gradient(from 0deg at 50% 20%, transparent 0deg, rgba(255, 245, 210, 0.35) 8deg, transparent 20deg, transparent 200deg, rgba(255, 245, 210, 0.25) 215deg, transparent 230deg);
+      animation: raysweep 38s linear infinite;
+      will-change: transform;
+    }
+
+    @keyframes raysweep {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .veil {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(255, 251, 243, 0.15), rgba(244, 235, 218, 0.72) 88%);
+    }
+
+    .bg-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      font-size: 12px;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--champagne-2);
+      font-weight: 500;
+      margin-bottom: 18px;
+    }
+
+    .divider {
+      width: 70px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--champagne), transparent);
+      margin: 26px auto;
+    }
+
+    /* ===================== HERO ===================== */
+    #hero {
+      padding-top: 0;
+    }
+
+    .mandala-ring {
+      position: absolute;
+      width: 900px;
+      height: 900px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: spin 120s linear infinite;
+      z-index: 1;
+      will-change: transform;
+    }
+
+    .mandala-ring.r2 {
+      width: 1100px;
+      height: 1100px;
+      animation-duration: 180s;
+      animation-direction: reverse;
+      border-color: rgba(179, 148, 80, 0.16);
+    }
+
+    @keyframes spin {
+      to {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    .invocation {
+      font-size: 14px;
+      letter-spacing: 2px;
+      color: var(--ink-soft);
+      margin-bottom: 22px;
+    }
+
+    .monogram {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 15px;
+      letter-spacing: 6px;
+      color: var(--soft-gold);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-names {
+      font-size: clamp(58px, 10vw, 150px);
+      line-height: 1.05;
+      color: #fffdf8;
+      text-shadow: 0 4px 28px rgba(0, 0, 0, 0.5), 0 0 46px rgba(233, 214, 166, 0.3);
+    }
+
+    .hero-names .amp {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: .5em;
+      color: var(--soft-gold);
+      display: inline-block;
+      margin: 0 10px;
+    }
+
+    .hero-names .char {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(30px) rotate(3deg);
+    }
+
+    .hero-sub {
+      font-size: 15px;
+      letter-spacing: 3px;
+      color: #f1e6cc;
+      text-transform: uppercase;
+      margin-top: 22px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-families {
+      margin-top: 34px;
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.9;
+      max-width: 560px;
+    }
+
+    .hero-families b {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .scroll-cue {
+      position: absolute;
+      bottom: 36px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #f1e6cc;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .scroll-cue .line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(180deg, var(--champagne), transparent);
+      animation: scrollpulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollpulse {
+
+      0%,
+      100% {
+        opacity: .3;
+      }
+
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* ===================== COUPLE INTRO + SAVE THE DATE ===================== */
+    #intro-savedate {
+      min-height: 130vh;
+    }
+
+    .couple-copy {
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .couple-copy .names-sm {
+      font-size: clamp(30px, 5vw, 50px);
+      color: var(--olive-dark);
+      margin: 6px 0 14px;
+    }
+
+    .couple-copy p {
+      font-size: 14.5px;
+      color: var(--ink-soft);
+      line-height: 1.9;
+    }
+
+    .scratch-wrap {
+      position: relative;
+      width: min(90vw, 460px);
+      height: min(60vw, 300px);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--glass-border);
+      margin-top: 30px;
+    }
+
+    .scratch-reveal {
+      position: absolute;
+      inset: 0;
+      border-radius: 18px;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--warm-white), var(--cream));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scratch-reveal .eyebrow {
+      margin-bottom: 10px;
+    }
+
+    .scratch-reveal .rdate {
+      font-size: clamp(30px, 6vw, 46px);
+      color: var(--olive-dark);
+    }
+
+    .scratch-reveal .rday {
+      font-size: 14px;
+      letter-spacing: 3px;
+      color: var(--champagne-2);
+      margin-top: 8px;
+      text-transform: uppercase;
+    }
+
+    #scratch-canvas {
+      position: absolute;
+      inset: 0;
+      border-radius: 18px;
+      cursor: pointer;
+      touch-action: none;
+    }
+
+    .scratch-hint {
+      margin-top: 20px;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      opacity: .8;
+    }
+
+    .scratch-hint.done {
+      opacity: 0;
+    }
+
+    /* ===================== COUNTDOWN ===================== */
+    #countdown {
+      background: linear-gradient(180deg, var(--cream-2), var(--ivory));
+    }
+
+    .flip-row {
+      display: flex;
+      gap: 18px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .flip-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .flip-box {
+      width: 92px;
+      height: 104px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, var(--warm-white), var(--cream));
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flip-box::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      height: 1px;
+      background: rgba(179, 148, 80, 0.3);
+    }
+
+    .flip-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 44px;
+      color: var(--olive-dark);
+    }
+
+    .flip-label {
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+    }
+
+    /* ===================== EVENTS — CINEMATIC VIDEO CHAPTERS ===================== */
+    #events {
+      background: linear-gradient(180deg, var(--ivory), var(--cream));
+      padding-bottom: 80px;
+    }
+
+    .event-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 30px;
+    }
+
+    .event-chapter {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      background: var(--glass);
+      backdrop-filter: blur(14px);
+      border: 1px solid var(--glass-border);
+      border-radius: 26px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .event-chapter.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .event-chapter::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(180deg, var(--champagne), var(--olive));
+    }
+
+    .event-chapter.glow-yellow::before {
+      background: linear-gradient(180deg, #e8c15a, #c9a55c);
+    }
+
+    .event-video-wrap {
+      position: relative;
+      flex: 0 0 250px;
+      width: 250px;
+      height: 440px;
+      border-radius: 22px;
+      overflow: hidden;
+      padding: 3px;
+      background: linear-gradient(145deg, var(--soft-gold), var(--champagne-2) 45%, var(--olive) 100%);
+      box-shadow: 0 22px 46px rgba(90, 70, 30, 0.28), 0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+      cursor: pointer;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
+    .event-video-wrap .video-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 19px;
+      overflow: hidden;
+      background: #000;
+      transform: translateZ(0);
+    }
+
+    .event-video-wrap video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
+    /* Sangeeth video has on-screen text — use contain so nothing gets cropped */
+    #chapter-sangeeth .event-video-wrap video {
+      object-fit: contain;
+      background: #000;
+    }
+
+    .event-video-wrap .vignette {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.45), inset 0 -40px 60px rgba(0, 0, 0, 0.35);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.12), transparent 30%, transparent 70%, rgba(0, 0, 0, 0.25));
+    }
+
+    .event-video-wrap .play-badge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      background: rgba(255, 253, 248, 0.22);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      opacity: 0;
+      transition: opacity .4s ease, transform .4s ease;
+      pointer-events: none;
+    }
+
+    /* hover effects only for real mouse pointers — prevents touch devices getting stuck mid-transition (the cause of the shaking) */
+    @media (hover:hover) and (pointer:fine) {
+      .event-video-wrap {
+        transition: transform .45s ease, box-shadow .45s ease;
+      }
+
+      .event-video-wrap:hover {
+        transform: translateY(-10px) translateZ(0);
+        box-shadow: 0 32px 64px rgba(90, 70, 30, 0.34), 0 0 0 1px rgba(255, 255, 255, 0.5) inset, 0 0 40px rgba(201, 165, 92, 0.45);
+      }
+
+      .event-video-wrap video {
+        transition: transform .6s ease;
+      }
+
+      .event-video-wrap:hover video {
+        transform: scale(1.08) translateZ(0);
+      }
+
+      .event-video-wrap:hover .play-badge {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    .event-video-wrap .expand-hint {
+      position: absolute;
+      bottom: 12px;
+      right: 12px;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 6px 12px;
+      border-radius: 20px;
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .marigold {
+      position: absolute;
+      font-size: 14px;
+      opacity: .8;
+      animation: fall linear infinite;
+      color: #e0a83a;
+      pointer-events: none;
+    }
+
+    .event-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .event-num {
+      font-size: 12px;
+      letter-spacing: 3px;
+      color: var(--champagne-2);
+      text-transform: uppercase;
+    }
+
+    .event-title {
+      font-size: 32px;
+      color: var(--olive-dark);
+      margin: 8px 0 4px;
+    }
+
+    .event-meta {
+      font-size: 14px;
+      color: var(--ink-soft);
+      margin-bottom: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+    }
+
+    .event-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .event-venue {
+      font-size: 14.5px;
+      line-height: 1.7;
+      color: var(--ink);
+      margin-bottom: 18px;
+    }
+
+    .event-venue b {
+      color: var(--olive-dark);
+    }
+
+    .event-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 20px;
+      border-radius: 40px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      border: 1px solid var(--champagne);
+      color: var(--olive-dark);
+      transition: all .3s ease;
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    .btn:hover {
+      background: var(--champagne);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(180, 140, 60, 0.35);
+    }
+
+    .btn.solid {
+      background: var(--olive);
+      color: #fff;
+      border-color: var(--olive);
+    }
+
+    .btn.solid:hover {
+      background: var(--olive-dark);
+    }
+
+    .event-qr {
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+      border: 1px solid var(--glass-border);
+    }
+
+    /* ===================== LOVE STORY ===================== */
+    #story {
+      background: linear-gradient(180deg, var(--cream), var(--cream-2));
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 640px;
+      width: 100%;
+      margin-top: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, transparent, var(--champagne) 10%, var(--champagne) 90%, transparent);
+      transform: translateX(-50%);
+    }
+
+    .tl-item {
+      position: relative;
+      width: 50%;
+      padding: 0 40px 70px;
+      text-align: left;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .tl-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+      padding-right: 50px;
+      padding-left: 0;
+    }
+
+    .tl-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+
+    .tl-dot {
+      position: absolute;
+      top: 2px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--champagne);
+      box-shadow: 0 0 0 6px rgba(201, 165, 92, 0.18);
+    }
+
+    .tl-item:nth-child(odd) .tl-dot {
+      right: -6px;
+    }
+
+    .tl-item:nth-child(even) .tl-dot {
+      left: -6px;
+    }
+
+    .tl-year {
+      font-size: 12px;
+      letter-spacing: 2px;
+      color: var(--champagne-2);
+      text-transform: uppercase;
+    }
+
+    .tl-title {
+      font-size: 24px;
+      color: var(--olive-dark);
+      margin: 6px 0;
+    }
+
+    .tl-text {
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    /* ===================== GALLERY — scattered photo wall ===================== */
+    #gallery {
+      background: linear-gradient(180deg, var(--cream-2), var(--ivory));
+      overflow: hidden;
+    }
+
+    .gallery-rays {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: .55;
+      background:
+        radial-gradient(42% 28% at 18% 22%, rgba(233, 214, 166, .22), transparent 70%),
+        radial-gradient(36% 24% at 82% 38%, rgba(184, 147, 74, .14), transparent 72%),
+        radial-gradient(50% 30% at 50% 88%, rgba(255, 253, 248, .35), transparent 70%);
+    }
+
+    .photo-wall-stage {
+      position: relative;
+      width: 100%;
+      max-width: min(1180px, 100%);
+      margin: 34px auto 0;
+    }
+
+    .photo-wall__fx {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .photo-wall {
+      position: relative;
+      columns: 3;
+      column-gap: clamp(18px, 2.8vw, 34px);
+      padding: clamp(8px, 2vw, 20px) 0 clamp(20px, 4vw, 48px);
+      z-index: 2;
+    }
+
+    .photo-card {
+      --rot: 0deg;
+      --nudge-x: 0px;
+      --nudge-y: 0px;
+      --scale: 1;
+      --parallax-y: 0px;
+      --enter-x: 0px;
+      --enter-y: 28px;
+      --enter-s: .96;
+      --drift-delay: 0s;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin: 0 0 clamp(22px, 3.2vw, 42px);
+      break-inside: avoid;
+      page-break-inside: avoid;
+      vertical-align: top;
+      opacity: 0;
+      cursor: pointer;
+      transform: translate3d(0, var(--parallax-y), 0);
+      will-change: transform, opacity;
+      z-index: 2;
+    }
+
+    .photo-card--sm {
+      width: 86%;
+      margin-inline: auto;
+    }
+
+    .photo-card--md {
+      width: 96%;
+      margin-inline: auto;
+    }
+
+    .photo-card--lg {
+      width: 100%;
+    }
+
+    .photo-card[data-enter="left"] {
+      --enter-x: -56px;
+      --enter-y: 18px;
+      --enter-s: 1;
+    }
+
+    .photo-card[data-enter="right"] {
+      --enter-x: 56px;
+      --enter-y: 18px;
+      --enter-s: 1;
+    }
+
+    .photo-card[data-enter="up"] {
+      --enter-x: 0px;
+      --enter-y: 40px;
+      --enter-s: .93;
+    }
+
+    .photo-card__inner {
+      transform: translate3d(var(--enter-x), var(--enter-y), 0) scale(var(--enter-s));
+      transition: transform 1.15s cubic-bezier(.22, .61, .36, 1), opacity 1.15s cubic-bezier(.22, .61, .36, 1);
+      transform-origin: center center;
+    }
+
+    .photo-card.is-in {
+      opacity: 1;
+    }
+
+    .photo-card.is-in .photo-card__inner {
+      transform: translate3d(var(--nudge-x), var(--nudge-y), 0) rotate(var(--rot)) scale(var(--scale));
+      animation: photoDrift 8.5s ease-in-out infinite alternate;
+      animation-delay: calc(1.2s + var(--drift-delay));
+    }
+
+    .photo-card__paper {
+      position: relative;
+      padding: clamp(8px, 1.2vw, 12px);
+      border-radius: 10px;
+      background: linear-gradient(165deg, rgba(255, 253, 248, .98), rgba(244, 235, 218, .96) 55%, rgba(239, 227, 203, .94));
+      border: 1px solid rgba(201, 165, 92, .55);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .7) inset, 0 10px 28px -16px rgba(58, 47, 34, .28), 0 2px 8px rgba(58, 47, 34, .06);
+      transition: transform .55s cubic-bezier(.22, .61, .36, 1), box-shadow .55s cubic-bezier(.22, .61, .36, 1), filter .55s cubic-bezier(.22, .61, .36, 1);
+      transform: translateZ(0);
+    }
+
+    .photo-card__paper::before {
+      content: "";
+      position: absolute;
+      inset: 5px;
+      border-radius: 7px;
+      border: 1px solid rgba(184, 147, 74, .28);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .photo-card__paper::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      pointer-events: none;
+      z-index: 3;
+      background: linear-gradient(135deg, rgba(255, 255, 255, .28), transparent 42%, rgba(184, 147, 74, .06));
+      mix-blend-mode: soft-light;
+    }
+
+    .photo-card__paper img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      display: block;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 4px;
+      background: rgba(230, 215, 190, .35);
+    }
+
+    @media (hover:hover) and (pointer:fine) {
+      .photo-card:hover {
+        z-index: 5;
+      }
+
+      .photo-card.is-in:hover .photo-card__paper {
+        transform: translateY(-10px) scale(1.025) rotate(.6deg);
+        box-shadow: 0 1px 0 rgba(255, 255, 255, .75) inset, 0 28px 54px -22px rgba(58, 47, 34, .42), 0 10px 22px rgba(184, 147, 74, .12);
+        filter: saturate(1.04);
+      }
+
+      .photo-card.is-in:focus-within .photo-card__paper {
+        outline: 2px solid rgba(184, 147, 74, .55);
+        outline-offset: 4px;
+      }
+    }
+
+    .photo-card.is-touched .photo-card__paper {
+      animation: photoTouch .55s cubic-bezier(.22, .61, .36, 1);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .75) inset, 0 18px 40px -18px rgba(58, 47, 34, .36), 0 0 0 1px rgba(201, 165, 92, .45), 0 0 28px rgba(201, 165, 92, .28);
+    }
+
+    @keyframes photoDrift {
+      0% {
+        transform: translate3d(var(--nudge-x), var(--nudge-y), 0) rotate(var(--rot)) scale(var(--scale));
+      }
+
+      50% {
+        transform: translate3d(calc(var(--nudge-x) + 2px), calc(var(--nudge-y) - 5px), 0) rotate(calc(var(--rot) + .35deg)) scale(calc(var(--scale) * 1.008));
+      }
+
+      100% {
+        transform: translate3d(calc(var(--nudge-x) - 1px), calc(var(--nudge-y) + 3px), 0) rotate(calc(var(--rot) - .25deg)) scale(var(--scale));
+      }
+    }
+
+    @keyframes photoTouch {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+
+      40% {
+        transform: translateY(-6px) scale(1.03);
+      }
+
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    /* decorative sparkles / petals / dots */
+    .photo-decor {
+      position: absolute;
+      pointer-events: none;
+      z-index: 1;
+      opacity: .55;
+    }
+
+    .photo-decor--spark {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(233, 214, 166, .95) 0%, rgba(184, 147, 74, .2) 55%, transparent 70%);
+      animation: photoSpark 4.8s ease-in-out infinite;
+    }
+
+    .photo-decor--spark::before,
+    .photo-decor--spark::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 1px;
+      height: 12px;
+      background: linear-gradient(180deg, transparent, rgba(233, 214, 166, .75), transparent);
+      transform: translate(-50%, -50%);
+    }
+
+    .photo-decor--spark::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .photo-decor--petal {
+      width: 14px;
+      height: 10px;
+      border-radius: 60% 40% 60% 40%;
+      background: linear-gradient(135deg, rgba(233, 214, 166, .55), rgba(184, 147, 74, .15));
+      transform: rotate(25deg);
+      animation: photoPetal 11s ease-in-out infinite alternate;
+    }
+
+    .photo-decor--dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(184, 147, 74, .55);
+      box-shadow: 0 0 8px rgba(233, 214, 166, .45);
+      animation: photoSpark 6s ease-in-out infinite;
+    }
+
+    .photo-decor--ray {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 253, 248, .45), transparent 68%);
+      filter: blur(2px);
+      animation: photoSpark 9s ease-in-out infinite;
+    }
+
+    .photo-decor.a {
+      top: 8%;
+      left: 6%;
+      animation-delay: 0s;
+    }
+
+    .photo-decor.b {
+      top: 42%;
+      right: 4%;
+      animation-delay: 1.2s;
+    }
+
+    .photo-decor.d {
+      top: 28%;
+      left: 38%;
+      opacity: .35;
+    }
+
+    .photo-decor.f {
+      top: 16%;
+      right: 28%;
+    }
+
+    .photo-decor.h {
+      top: 55%;
+      left: 8%;
+      opacity: .4;
+    }
+
+    @keyframes photoSpark {
+
+      0%,
+      100% {
+        opacity: .25;
+        transform: scale(.85);
+      }
+
+      50% {
+        opacity: .7;
+        transform: scale(1.15);
+      }
+    }
+
+    @keyframes photoPetal {
+      0% {
+        transform: translateY(0) rotate(18deg);
+      }
+
+      100% {
+        transform: translateY(10px) rotate(42deg);
+      }
+    }
+
+    @media (max-width:900px) {
+      .photo-wall {
+        columns: 2;
+        column-gap: clamp(14px, 3vw, 22px);
+      }
+
+      .photo-card--sm {
+        width: 90%;
+      }
+
+      .photo-card--md {
+        width: 98%;
+      }
+    }
+
+    @media (max-width:640px) {
+      .photo-card {
+        margin-bottom: clamp(18px, 4vw, 28px);
+      }
+
+      .photo-card[data-enter="left"],
+      .photo-card[data-enter="right"] {
+        --enter-x: 0px;
+        --enter-y: 32px;
+        --enter-s: .96;
+      }
+    }
+
+    @media (max-width:520px) {
+      .photo-wall {
+        columns: 1;
+      }
+
+      .photo-wall-stage {
+        max-width: 420px;
+      }
+
+      .photo-card--sm,
+      .photo-card--md,
+      .photo-card--lg {
+        width: 100%;
+      }
+
+      .photo-card {
+        --nudge-y: 0px;
+        --scale: 1;
+      }
+
+      .photo-decor {
+        opacity: .35;
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+
+      .photo-card,
+      .photo-card.is-in {
+        opacity: 1;
+        transform: none;
+      }
+
+      .photo-card__inner,
+      .photo-card.is-in .photo-card__inner {
+        transform: translate3d(var(--nudge-x, 0), var(--nudge-y, 0), 0) rotate(var(--rot, 0deg)) scale(var(--scale, 1));
+        animation: none !important;
+      }
+
+      .photo-card.is-touched .photo-card__paper,
+      .photo-decor {
+        animation: none !important;
+      }
+    }
+
+    #lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(20, 14, 8, 0.92);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity .35s ease;
+    }
+
+    #lightbox.open {
+      display: flex;
+      opacity: 1;
+    }
+
+    #lightbox img {
+      max-width: 88vw;
+      max-height: 82vh;
+      border-radius: 10px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+      transform: scale(0.94);
+      transition: transform .35s ease;
+    }
+
+    #lightbox.open img {
+      transform: scale(1);
+    }
+
+    #lightbox-close {
+      position: absolute;
+      top: 22px;
+      right: 26px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #lightbox-close:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    #lightbox-prev,
+    #lightbox-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #fff;
+      font-size: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #lightbox-prev {
+      left: 18px;
+    }
+
+    #lightbox-next {
+      right: 18px;
+    }
+
+    #lightbox-prev:hover,
+    #lightbox-next:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    @media(max-width:640px) {
+
+      #lightbox-prev,
+      #lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+      }
+
+      #lightbox-close {
+        width: 36px;
+        height: 36px;
+        top: 14px;
+        right: 14px;
+      }
+    }
+
+
+    /* ===================== LOCATION ===================== */
+    #location {
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+
+    .location-card {
+      width: min(94vw, 760px);
+      background: var(--glass-strong);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--glass-border);
+      border-radius: 28px;
+      padding: 44px 40px;
+      box-shadow: var(--shadow);
+    }
+
+    .loc-pin {
+      font-size: 30px;
+      display: inline-block;
+      animation: pinbounce 2.4s ease-in-out infinite;
+      margin-bottom: 6px;
+    }
+
+    @keyframes pinbounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .venue-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 20px 4px;
+      border-bottom: 1px solid var(--glass-border);
+      text-align: left;
+    }
+
+    .venue-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .venue-info .v-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--champagne-2);
+    }
+
+    .venue-info .v-name {
+      font-size: 22px;
+      color: var(--olive-dark);
+      margin: 4px 0 2px;
+    }
+
+    .venue-info .v-addr {
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+
+    .venue-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .icon-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--glass-border);
+      background: rgba(255, 255, 255, 0.5);
+      transition: all .25s ease;
+      font-size: 15px;
+    }
+
+    .icon-btn:hover {
+      background: var(--champagne);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .venue-qr {
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      border: 1px solid var(--glass-border);
+    }
+
+    .copy-toast {
+      position: fixed;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--olive-dark);
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: 12.5px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all .35s ease;
+      z-index: 100;
+      letter-spacing: .5px;
+    }
+
+    .copy-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ===================== RSVP ===================== */
+    #rsvp {
+      background: linear-gradient(180deg, var(--ivory), var(--cream));
+    }
+
+    .rsvp-card {
+      width: min(92vw, 520px);
+      background: var(--glass);
+      backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 26px;
+      padding: 44px 38px;
+      box-shadow: var(--shadow);
+      text-align: left;
+    }
+
+    .field {
+      margin-bottom: 18px;
+    }
+
+    .field label {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      margin-bottom: 8px;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+      width: 100%;
+      padding: 13px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--glass-border);
+      background: rgba(255, 255, 255, 0.6);
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+      color: var(--ink);
+      outline: none;
+      transition: border-color .3s ease, box-shadow .3s ease;
+    }
+
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: var(--champagne);
+      box-shadow: 0 0 0 3px rgba(201, 165, 92, 0.18);
+    }
+
+    .attend-toggle {
+      display: flex;
+      gap: 12px;
+    }
+
+    .attend-toggle button {
+      flex: 1;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--glass-border);
+      background: rgba(255, 255, 255, 0.5);
+      font-size: 13px;
+      letter-spacing: .5px;
+      color: var(--ink-soft);
+      transition: all .25s ease;
+    }
+
+    .attend-toggle button.active {
+      background: var(--olive);
+      border-color: var(--olive);
+      color: #fff;
+    }
+
+    .rsvp-submit {
+      width: 100%;
+      margin-top: 8px;
+      padding: 15px;
+      border-radius: 14px;
+      background: linear-gradient(120deg, var(--champagne), var(--olive));
+      color: #fff;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      box-shadow: 0 12px 26px rgba(112, 124, 78, 0.3);
+    }
+
+    .rsvp-submit:hover {
+      filter: brightness(1.06);
+    }
+
+    .rsvp-note {
+      font-size: 11.5px;
+      color: var(--ink-soft);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.6;
+    }
+
+    .rsvp-success {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+      color: var(--olive-dark);
+    }
+
+    .rsvp-success.show {
+      display: block;
+    }
+
+    /* ===================== FOOTER ===================== */
+    #footer-section {
+      min-height: 100vh;
+      min-height: 100dvh;
+      padding-bottom: 70px;
+    }
+
+    .footer-content .thank {
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--soft-gold);
+      margin-bottom: 10px;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer-content h2 {
+      font-size: clamp(30px, 4.5vw, 44px);
+      color: #fffdf8;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+    }
+
+    .footer-content .best {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #f1e6cc;
+      margin: 22px 0 8px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .footer-content .fnames {
+      font-size: clamp(38px, 6vw, 70px);
+      color: var(--soft-gold);
+      text-shadow: 0 4px 24px rgba(0, 0, 0, 0.55), 0 0 30px rgba(233, 214, 166, 0.35);
+    }
+
+    .footer-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    #footer-section .btn {
+      background: rgba(255, 253, 248, 0.14);
+      border-color: rgba(255, 253, 248, 0.5);
+      color: #fffdf8;
+    }
+
+    #footer-section .btn:hover {
+      background: var(--champagne);
+      color: #fff;
+    }
+
+    #footer-section .btn.solid {
+      background: linear-gradient(120deg, var(--champagne), var(--olive));
+      border-color: transparent;
+      color: #fff;
+    }
+
+    .footer-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .lantern {
+      position: absolute;
+      font-size: 26px;
+      opacity: .7;
+      animation: lanternfloat 8s ease-in-out infinite;
+      filter: drop-shadow(0 0 10px rgba(255, 210, 120, 0.6));
+    }
+
+    @keyframes lanternfloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-24px);
+      }
+    }
+
+    /* ===================== FLOATING PLAYER ===================== */
+    #player {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 50;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--warm-white);
+      border: 1px solid var(--glass-border);
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #player svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--olive-dark);
+      fill: none;
+    }
+
+    #player.playing {
+      animation: pulseplayer 2.4s ease-in-out infinite;
+    }
+
+    @keyframes pulseplayer {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0 0 rgba(201, 165, 92, 0.35);
+      }
+
+      50% {
+        box-shadow: 0 0 0 10px rgba(201, 165, 92, 0);
+      }
+    }
+
+    .map-embed {
+      width: 100%;
+      height: 260px;
+      border: 0;
+      border-radius: 16px;
+      margin-top: 16px;
+      filter: saturate(0.9) sepia(0.06);
+    }
+
+    @media(max-width:820px) {
+
+      .event-chapter,
+      .event-chapter.reverse {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .event-video-wrap {
+        width: min(260px, 80vw);
+        height: min(460px, 70vw);
+        flex: none;
+      }
+
+      .event-body {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+      }
+
+      .event-meta {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .event-meta span {
+        white-space: normal;
+      }
+
+      .event-title {
+        font-size: 26px;
+      }
+    }
+
+    @media(max-width:640px) {
+      .section {
+        padding: 90px 6vw;
+      }
+
+      .hero-names {
+        font-size: clamp(46px, 15vw, 90px);
+      }
+
+      .masonry {
+        columns: 2 150px;
+      }
+
+      .tl-item {
+        width: 100%;
+        left: 0 !important;
+        text-align: left !important;
+        padding: 0 0 50px 40px !important;
+      }
+
+      .tl-dot {
+        left: -6px !important;
+        right: auto !important;
+      }
+
+      .timeline::before {
+        left: 0;
+      }
+
+      .venue-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .venue-actions {
+        width: 100%;
+      }
+
+      .mandala-ring {
+        width: 420px;
+        height: 420px;
+      }
+
+      .mandala-ring.r2 {
+        width: 520px;
+        height: 520px;
+      }
+
+      .event-chapter {
+        padding: 22px;
+      }
+
+      .event-video-wrap {
+        width: min(220px, 75vw);
+        height: min(390px, 64vw);
+        flex: none;
+      }
+
+      /* sangeeth video — full-width on small phones */
+      #chapter-sangeeth .event-video-wrap {
+        width: min(240px, 82vw);
+        height: min(420px, 72vw);
+      }
+
+      .event-body {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .event-meta {
+        font-size: 13px;
+      }
+
+      .location-card,
+      .rsvp-card {
+        padding: 30px 22px;
+        backdrop-filter: blur(10px);
+      }
+
+      .event-chapter {
+        backdrop-filter: blur(6px);
+      }
+
+      .event-chapter .event-video-wrap {
+        backdrop-filter: none;
+      }
+
+      .flip-box {
+        width: 70px;
+        height: 82px;
+      }
+
+      .flip-num {
+        font-size: 32px;
+      }
+
+      .flip-row {
+        gap: 10px;
+      }
+
+      .icon-btn {
+        width: 34px;
+        height: 34px;
+        font-size: 13px;
+      }
+
+      .btn {
+        padding: 10px 16px;
+        font-size: 11.5px;
+      }
+
+      .qr-card {
+        width: 150px;
+      }
+
+      .bg-layer {
+        animation-duration: 34s;
+      }
+
+      .light-rays {
+        opacity: .35;
+      }
+    }
+
+    @media(max-width:640px), (hover:none) and (pointer:coarse) {
+
+      button,
+      .btn,
+      .icon-btn,
+      a.btn {
+        touch-action: manipulation;
+      }
+    }
+
+    /* ===================== NEW: HALDI (FAMILY ONLY) ===================== */
+    .haldi-wrap {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .family-badge {
+      display: inline-block;
+      margin: 14px auto 0;
+      padding: 6px 18px;
+      border: 1px solid var(--glass-border);
+      border-radius: 30px;
+      background: var(--blush);
+      color: var(--olive-dark);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .haldi-media-placeholder {
+      margin-top: 30px;
+      padding: 44px 20px;
+      border: 1.5px dashed var(--glass-border);
+      border-radius: 14px;
+      background: var(--cream-2);
+      color: var(--ink-soft);
+      font-size: 13px;
+      letter-spacing: .3px;
+    }
+    .haldi-media-placeholder .ico { font-size: 26px; display:block; margin-bottom:8px; }
+
+    /* ===================== NEW: SAVE-THE-DATE PROGRAMME LIST ===================== */
+    .savedate-schedule {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 22px;
+      justify-content: center;
+      font-size: 12.5px;
+      color: var(--ink-soft);
+      letter-spacing: .2px;
+    }
+    .savedate-schedule span { white-space: nowrap; }
+    .savedate-schedule b { color: var(--olive-dark); font-weight: 600; }
+
+    /* ===================== NEW: WEDDING DAY NOTE ===================== */
+    .wedding-day-note {
+      max-width: 520px;
+      margin: 30px auto 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 19px;
+      color: var(--olive-dark);
+      line-height: 1.6;
+    }
+    .schedule-disclaimer {
+      margin-top: 10px;
+      font-size: 11.5px;
+      color: var(--ink-soft);
+      letter-spacing: .3px;
+    }
+    .hero-names .name-part { white-space: nowrap; display: inline-block; }
+    .section-subtitle {
+      max-width: 480px;
+      margin: -8px auto 0;
+      color: var(--ink-soft);
+      font-size: 14px;
+    }
+    .venue-line {
+      margin-top: 6px;
+      font-size: 13px;
+      letter-spacing: .3px;
+      color: var(--champagne-2);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============ INTRO VIDEO (UNCHANGED) ============ -->
+  <div id="intro-screen">
+    <video id="intro-video" src="intro.mp4" autoplay muted playsinline></video>
+    <div id="intro-tap"></div>
+    <button id="open-invitation">Open Invitation</button>
+  </div>
+
+  <!-- ============ AMBIENT DECOR ============ -->
+  <div id="cursor-glow"></div>
+  <div id="petal-field"></div>
+  <div id="particles"></div>
+  <div class="copy-toast" id="copy-toast">Copied to clipboard</div>
+
+  <!-- ============ MAIN SITE ============ -->
+  <div id="site">
+
+    <!-- HERO -->
+    <section id="hero" class="section bg-section">
+      <div class="bg-layer" id="hero-bg" style="background-image:url('hero-bg.jpg');background-position:center 20%;">
+      </div>
+      <div class="veil"
+        style="background:linear-gradient(180deg, rgba(30,12,14,0.34) 0%, rgba(30,12,14,0.62) 32%, rgba(30,12,14,0.68) 62%, rgba(30,12,14,0.42) 100%);">
+      </div>
+      <div class="bg-content">
+        <div class="monogram">The Wedding Of</div>
+        <h1 class="hero-names script" id="hero-names"><span class="name-part">Rahul</span> <span
+            class="amp serif">&amp;</span> <span class="name-part">Yukta</span></h1>
+        <p class="hero-sub">26 &middot; 12 &middot; 2026 &nbsp;&middot;&nbsp; Vijaya Convention Centre, Thiruvalla, Kerala</p>
+      </div>
+      <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
+    </section>
+    <!-- COUPLE INTRODUCTION + SAVE THE DATE -->
+    <section id="intro-savedate" class="section bg-section">
+      <div class="bg-layer" id="couple-bg" style="background-image:url('couple-bg.jpg');"></div>
+      <div class="light-rays"></div>
+      <div class="veil"></div>
+      <div class="bg-content">
+        <div class="eyebrow">Together With Their Families</div>
+        <h2 class="couple-copy names-sm script">Rahul &amp; Yukta</h2>
+        <div class="couple-copy">
+          <p>With the blessings of the Almighty and our beloved elders, A V Suresh Nambiar &amp; Sobha Suresh and
+            Lokesh Jain &amp; Ritu Jain joyfully invite you to witness the beginning of Rahul &amp; Yukta's forever.</p>
+        </div>
+        <div class="divider"></div>
+        <div class="scratch-wrap">
+          <div class="scratch-reveal">
+            <div class="eyebrow">Save The Date</div>
+            <div class="rdate serif">26 December 2026</div>
+            <div class="rday">Saturday &middot; Programmes From 9:30 AM</div>
+          </div>
+          <canvas id="scratch-canvas"></canvas>
+        </div>
+        <p class="scratch-hint" id="scratch-hint">Scratch the gold with your cursor or finger</p>
+        <div class="savedate-schedule">
+          <span><b>9:30 AM</b> Programmes Begin</span>
+          <span><b>10:00 AM</b> Sopana Sangeetham</span>
+          <span><b>Followed By</b> Dances</span>
+          <span><b>Before 12:15 PM</b> Marriage</span>
+        </div>
+      </div>
+    </section>
+    <!-- ENGAGEMENT -->
+    <section id="engagement" class="section">
+      <div class="eyebrow">The Engagement</div>
+      <h2 style="font-size:clamp(30px,4.5vw,48px);color:var(--olive-dark);">A Beautiful Beginning</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">A beautiful beginning to our journey together.</p>
+      <p class="venue-line">📍 Kapila Event Park</p>
+      <div class="event-grid" id="engagement-grid">
+        <!-- generated from the engagementVideos data array in the script below -->
+      </div>
+    </section>
+
+    <!-- HALDI -->
+    <section id="haldi" class="section marble-bg" style="min-height:auto;padding:80px 20px;">
+      <div class="haldi-wrap">
+        <div class="eyebrow">Haldi</div>
+        <h2 style="font-size:clamp(26px,4vw,38px);color:var(--olive-dark);">A Celebration With Family</h2>
+        <div class="family-badge">Family Only</div>
+        <div class="haldi-media-placeholder">
+          <span class="ico">🌼</span>
+          Photographs and videos from the Haldi ceremony will appear here soon.
+        </div>
+      </div>
+    </section>
+
+    <!-- WEDDING DAY -->
+    <section id="wedding-day" class="section">
+      <div class="eyebrow">Saturday &middot; 26 December 2026</div>
+      <h2 style="font-size:clamp(30px,4.5vw,48px);color:var(--olive-dark);">The Wedding Day</h2>
+      <div class="divider"></div>
+      <div class="timeline" id="wedding-timeline">
+        <!-- generated from the weddingSchedule data array in the script below -->
+      </div>
+      <p class="wedding-day-note">"We invite you to join us early and be part of the celebrations from the very
+        beginning."</p>
+      <p class="schedule-disclaimer">This schedule is not necessarily final and may be updated closer to the day.</p>
+    </section>
+    <!-- GALLERY -->
+    <section id="gallery" class="section" style="min-height:auto;padding-bottom:110px;">
+      <div class="gallery-rays" aria-hidden="true"></div>
+      <div class="bg-content" style="position:relative;z-index:2;width:100%;">
+        <div class="eyebrow">Moments</div>
+        <h2 style="font-size:clamp(30px,4.5vw,48px);color:var(--olive-dark);">Our Moments</h2>
+        <div class="divider"></div>
+        <p style="max-width:480px;margin-inline:auto;color:var(--ink-soft);font-size:14px;margin-top:-10px;">A few
+          cherished frames from our celebrations together.</p>
+
+        <div class="photo-wall-stage">
+          <div class="photo-wall__fx" aria-hidden="true">
+            <span class="photo-decor photo-decor--spark a"></span>
+            <span class="photo-decor photo-decor--spark b"></span>
+            <span class="photo-decor photo-decor--petal d"></span>
+            <span class="photo-decor photo-decor--dot f"></span>
+            <span class="photo-decor photo-decor--ray h"></span>
+          </div>
+
+          <div class="photo-wall" id="photoWall" aria-label="Wedding photographs">
+            <!-- generated from the galleryImages data array in the script below -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+      <button id="lightbox-close" aria-label="Close">✕</button>
+      <button id="lightbox-prev" aria-label="Previous">‹</button>
+      <img id="lightbox-img" src="" alt="">
+      <button id="lightbox-next" aria-label="Next">›</button>
+    </div>
+
+
+
+    <!-- COUNTDOWN -->
+    <section id="countdown" class="section marble-bg">
+      <div class="eyebrow">Counting Down To Forever</div>
+      <h2 style="font-size:clamp(28px,4vw,42px);color:var(--olive-dark);">Until We Say "I Do"</h2>
+      <div class="flip-row" id="flip-row">
+        <div class="flip-unit">
+          <div class="flip-box"><span class="flip-num" id="cd-days">00</span></div><span class="flip-label">Days</span>
+        </div>
+        <div class="flip-unit">
+          <div class="flip-box"><span class="flip-num" id="cd-hours">00</span></div><span
+            class="flip-label">Hours</span>
+        </div>
+        <div class="flip-unit">
+          <div class="flip-box"><span class="flip-num" id="cd-mins">00</span></div><span class="flip-label">Mins</span>
+        </div>
+        <div class="flip-unit">
+          <div class="flip-box"><span class="flip-num" id="cd-secs">00</span></div><span class="flip-label">Secs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="section marble-bg">
+      <div class="bg-content">
+        <div class="loc-pin">📍</div>
+        <div class="eyebrow">We Can't Wait To Celebrate With You</div>
+        <h2 style="font-size:clamp(30px,4.5vw,46px);color:var(--olive-dark);">Wedding Venue</h2>
+        <div class="location-card">
+
+          <div class="venue-row">
+            <div class="venue-info">
+              <div class="v-label">Wedding Venue</div>
+              <div class="v-name serif">Vijaya Convention Centre</div>
+              <div class="v-addr">Thiruvalla, Kerala</div>
+            </div>
+            <div class="venue-actions">
+              <a class="icon-btn" title="Open Google Maps" target="_blank"
+                href="https://www.google.com/maps/search/?api=1&query=Vijaya+Convention+Centre+Thiruvalla+Kerala">📍</a>
+              <a class="icon-btn" title="Get Directions" target="_blank"
+                href="https://www.google.com/maps/dir/?api=1&destination=Vijaya+Convention+Centre+Thiruvalla+Kerala">🧭</a>
+              <button class="icon-btn" title="Add To Calendar" onclick="downloadICS('wedding')">📅</button>
+              <button class="icon-btn" title="Copy Address"
+                onclick="copyAddress('Vijaya Convention Centre, Thiruvalla, Kerala')">⧉</button>
+              <button class="icon-btn" title="Share Location"
+                onclick="shareLocation('Vijaya Convention Centre','https://www.google.com/maps/search/?api=1&query=Vijaya+Convention+Centre+Thiruvalla+Kerala')">↗</button>
+              <img class="venue-qr" alt="QR"
+                src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&color=94-18-32&bgcolor=255-251-243&data=https%3A%2F%2Fwww.google.com%2Fmaps%2Fsearch%2F%3Fapi%3D1%26query%3DVijaya%2BConvention%2BCentre%2BThiruvalla%2BKerala">
+            </div>
+          </div>
+
+          <iframe class="map-embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Vijaya+Convention+Centre,+Thiruvalla,+Kerala&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+    <!-- RSVP -->
+    <section id="rsvp" class="section">
+      <div class="eyebrow">Kindly Respond</div>
+      <h2 style="font-size:clamp(30px,4.5vw,48px);color:var(--olive-dark);">Will You Join Us?</h2>
+      <div class="rsvp-card">
+        <p style="text-align:center;color:var(--ink-soft);font-size:14px;margin-top:-6px;margin-bottom:18px;">Your
+          presence will make our celebration even more special.</p>
+        <form id="rsvp-form">
+          <div class="field"><label>Full Name</label><input type="text" required id="r-name" placeholder="Your name">
+          </div>
+          <div class="field"><label>Mobile Number</label><input type="tel" required id="r-phone" placeholder="+91"></div>
+          <div class="field"><label>Number Of Guests</label><input type="number" min="1" value="1" required
+              id="r-guests"></div>
+          <div class="field"><label>Will You Be Joining Us?</label>
+            <div class="attend-toggle">
+              <button type="button" class="active" data-val="yes" onclick="toggleAttend(this)">YES, I'LL BE THERE</button>
+              <button type="button" data-val="no" onclick="toggleAttend(this)">SORRY, CAN'T MAKE IT</button>
+            </div>
+          </div>
+          <div class="field"><label>Message For The Couple</label><textarea rows="3" id="r-message"
+              placeholder="Leave your blessings…"></textarea></div>
+          <button type="submit" class="rsvp-submit">Confirm Participation</button>
+        </form>
+        <div class="rsvp-success" id="rsvp-success">
+          <div style="font-size:34px;">🌸</div>
+          <p style="margin-top:8px;">Thank you! Your response has been saved.</p>
+        </div>
+        <p class="rsvp-note">Your response is recorded straight away. For anything urgent, feel free to reach out
+          directly too.</p>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <section id="footer-section" class="section bg-section">
+      <div class="bg-layer" id="footer-bg" style="background-image:url('footer-bg.jpg');animation-duration:34s;"></div>
+      <div class="veil"
+        style="background:linear-gradient(180deg, rgba(40,14,16,0.35), rgba(40,14,16,0.55) 40%, rgba(28,10,12,0.72));">
+      </div>
+      <div id="lantern-field"></div>
+      <div class="bg-content footer-content">
+        <div class="thank">With Love</div>
+        <h2 class="serif">For Being Part Of Our Story</h2>
+        <div class="fnames script">Rahul &amp; Yukta</div>
+        <div class="best" style="margin-top:6px;">26 &middot; 12 &middot; 2026</div>
+        <div class="footer-actions">
+          <!--
+        <button class="btn" onclick="backToTop()">↑ Back To Top</button>
+        <button class="btn" id="footer-music-btn" onclick="toggleMusic()">♪ Music</button>
+        <button class="btn solid" onclick="shareInvite()">Share Invitation ↗</button>
+        -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <button id="player" aria-label="Toggle music" onclick="toggleMusic()">
+    <svg id="icon-play" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6">
+      <polygon points="6 4 20 12 6 20 6 4"></polygon>
+    </svg>
+    <svg id="icon-pause" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"
+      style="display:none;">
+      <rect x="6" y="4" width="4" height="16"></rect>
+      <rect x="14" y="4" width="4" height="16"></rect>
+    </svg>
+  </button>
+  <audio id="bg-music" loop src="music.webm"></audio>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+
+  <script>
+    /* ================= INTRO VIDEO (UNCHANGED LOGIC) ================= */
+    const introScreen = document.getElementById('intro-screen');
+    const introVideo = document.getElementById('intro-video');
+    const openInviteBtn = document.getElementById('open-invitation');
+    const site = document.getElementById('site');
+    document.body.style.overflow = 'hidden';
+
+    setTimeout(() => openInviteBtn.classList.add('show'), 2000);
+
+    function endIntro() {
+      if (introScreen.classList.contains('fade-out')) return;
+      introScreen.classList.add('fade-out');
+      document.body.style.overflow = '';
+      gsap.to(site, { opacity: 1, duration: 1.4, ease: 'power2.out' });
+      setTimeout(() => introScreen.remove(), 1400);
+      initScrollAnimations();
+
+      /* Autoplay music on "Open Invitation" click (user gesture allows it) */
+      const bgMusic = document.getElementById('bg-music');
+      if (bgMusic && !playing) {
+        bgMusic.play().then(() => {
+          playing = true;
+          const pl = document.getElementById('player');
+          const ip = document.getElementById('icon-play');
+          const ipause = document.getElementById('icon-pause');
+          if (pl) pl.classList.add('playing');
+          if (ip) ip.style.display = 'none';
+          if (ipause) ipause.style.display = 'block';
+          const fmb = document.getElementById('footer-music-btn');
+          if (fmb) fmb.textContent = '❚❚ Pause Music';
+        }).catch(() => { });
+      }
+    }
+    introVideo.addEventListener('ended', endIntro);
+    openInviteBtn.addEventListener('click', endIntro);
+    introVideo.play().catch(() => {
+      document.getElementById('intro-tap').addEventListener('click', () => introVideo.play());
+    });
+
+    /* ================= LENIS SMOOTH SCROLL ================= */
+    gsap.registerPlugin(ScrollTrigger);
+    const lenis = new Lenis({ lerp: 0.15, smoothWheel: true, syncTouch: false });
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => lenis.raf(time * 1000));
+    gsap.ticker.lagSmoothing(0);
+    function backToTop() { lenis.scrollTo(0, { duration: 1.6 }); }
+
+    /* ================= CURSOR GLOW + PARALLAX (mouse devices only) ================= */
+    const glow = document.getElementById('cursor-glow');
+    const parallaxLayers = document.querySelectorAll('.bg-layer');
+    const hasFinePointer = window.matchMedia('(hover:hover) and (pointer:fine)').matches;
+    if (hasFinePointer) {
+      let rafPending = false;
+      let mouseX = 0, mouseY = 0;
+      window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX; mouseY = e.clientY;
+        if (rafPending) return;
+        rafPending = true;
+        requestAnimationFrame(() => {
+          rafPending = false;
+          gsap.to(glow, { x: mouseX, y: mouseY, duration: 0.8, ease: 'power2.out', overwrite: 'auto' });
+          const dx = (mouseX / window.innerWidth - 0.5) * 20;
+          const dy = (mouseY / window.innerHeight - 0.5) * 20;
+          parallaxLayers.forEach(l => gsap.to(l, { x: dx, y: dy, duration: 1.4, ease: 'power2.out', overwrite: 'auto' }));
+        });
+      }, { passive: true });
+    }
+
+    /* ================= PETALS + PARTICLES ================= */
+    const isMobile = window.innerWidth < 640 || (navigator.hardwareConcurrency && navigator.hardwareConcurrency <= 4);
+    const petalField = document.getElementById('petal-field');
+    const petalChars = ['🌸', '🌺', '❀', '✿'];
+    const petalCount = isMobile ? 3 : 6;
+    for (let i = 0; i < petalCount; i++) {
+      const p = document.createElement('div');
+      p.className = 'petal';
+      p.textContent = petalChars[Math.floor(Math.random() * petalChars.length)];
+      p.style.left = Math.random() * 100 + 'vw';
+      p.style.setProperty('--drift', (Math.random() * 120 - 60) + 'px');
+      p.style.animationDuration = (20 + Math.random() * 14) + 's';
+      p.style.animationDelay = (Math.random() * 20) + 's';
+      p.style.fontSize = (10 + Math.random() * 7) + 'px';
+      petalField.appendChild(p);
+    }
+    const particleField = document.getElementById('particles');
+    const sparkCount = isMobile ? 5 : 10;
+    for (let i = 0; i < sparkCount; i++) {
+      const s = document.createElement('div');
+      s.className = 'spark';
+      s.style.left = Math.random() * 100 + 'vw';
+      s.style.top = Math.random() * 100 + 'vh';
+      s.style.animationDelay = (Math.random() * 4) + 's';
+      particleField.appendChild(s);
+    }
+    /* ================= EDITABLE DATA: ENGAGEMENT VIDEOS ================= */
+    /* Add more videos any time — just append another object to this array. */
+    const engagementVideos = [
+      { src: "assets/engagement/engagement-01-welcome.mp4", title: "Welcome To Kapila" },
+      { src: "assets/engagement/engagement-02-garland.mp4", title: "The Exchange Of Hearts" },
+      { src: "assets/engagement/engagement-03-theyyam.mp4", title: "A Divine Blessing" },
+      { src: "assets/engagement/engagement-04-dance.mp4", title: "Joy In Every Step" }
+    ];
+
+    function renderEngagementVideos(list) {
+      const grid = document.getElementById('engagement-grid');
+      if (!grid) return;
+      grid.innerHTML = list.map((v, i) => `
+        <div class="event-chapter${i % 2 === 1 ? ' reverse' : ''}">
+          <div class="event-video-wrap" onclick="goFullscreen(this)">
+            <div class="video-inner">
+              <video class="event-video" data-src="${v.src}" muted loop playsinline></video>
+              <div class="vignette"></div>
+            </div>
+            <div class="play-badge">▶</div>
+            <span class="expand-hint">⤢ Expand</span>
+          </div>
+          <div class="event-body">
+            <div class="event-num">Moment 0${i + 1}</div>
+            <h3 class="event-title serif">${v.title}</h3>
+          </div>
+        </div>
+      `).join('');
+    }
+    renderEngagementVideos(engagementVideos);
+
+    /* ================= EDITABLE DATA: WEDDING DAY SCHEDULE ================= */
+    /* Add, remove or reorder programme items any time — the timeline rebuilds automatically. */
+    const weddingSchedule = [
+      { time: "9:30 AM", title: "Guest Arrival & Gathering" },
+      { time: "10:00 AM", title: "Sopana Sangeetham" },
+      { time: "10:00 AM onwards", title: "Dance Performances" },
+      { time: "Before 12:15 PM", title: "Marriage Ceremony" }
+    ];
+
+    function renderWeddingTimeline(list) {
+      const wrap = document.getElementById('wedding-timeline');
+      if (!wrap) return;
+      wrap.innerHTML = list.map(item => `
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-year">${item.time}</div>
+          <h3 class="tl-title serif">${item.title}</h3>
+        </div>
+      `).join('');
+    }
+    renderWeddingTimeline(weddingSchedule);
+
+    /* ================= EDITABLE DATA: GALLERY IMAGES ================= */
+    /* Add more photographs any time — just append another path to this array. */
+    const galleryImages = [
+      "assets/gallery/photo-01.jpg",
+      "assets/gallery/photo-02.jpg",
+      "assets/gallery/photo-03.jpg",
+      "assets/gallery/photo-04.jpg",
+      "assets/gallery/photo-05.jpg",
+      "assets/gallery/photo-06.jpg",
+      "assets/gallery/photo-07.jpg",
+      "assets/gallery/photo-08.jpg",
+      "assets/gallery/photo-09.jpg",
+      "assets/gallery/photo-10.jpg"
+    ];
+    /* repeating style variants so the scattered photo-wall keeps its organic feel
+       no matter how many images are added later */
+    const galleryStyleVariants = [
+      { size: 'lg', enter: 'left', speed: 0.05, rot: -3.2, nudgeY: 14, delay: 0 },
+      { size: 'md', enter: 'right', speed: -0.06, rot: 2.4, nudgeY: -8, delay: .5 },
+      { size: 'sm', enter: 'up', speed: 0.04, rot: -1.8, nudgeY: 10, delay: 1 },
+      { size: 'lg', enter: 'right', speed: -0.05, rot: 3.1, nudgeY: -12, delay: 1.5 },
+      { size: 'md', enter: 'left', speed: 0.06, rot: -2.6, nudgeY: 8, delay: 2 },
+      { size: 'sm', enter: 'up', speed: -0.04, rot: 2.2, nudgeY: -6, delay: .3 },
+      { size: 'lg', enter: 'left', speed: 0.05, rot: -3.6, nudgeY: 12, delay: .8 },
+      { size: 'md', enter: 'right', speed: -0.05, rot: 1.9, nudgeY: -10, delay: 1.8 }
+    ];
+
+    function renderGalleryWall(list) {
+      const wall = document.getElementById('photoWall');
+      if (!wall) return;
+      wall.innerHTML = list.map((src, i) => {
+        const v = galleryStyleVariants[i % galleryStyleVariants.length];
+        return `
+        <figure class="photo-card photo-card--${v.size} photo-tile" data-enter="${v.enter}" data-speed="${v.speed}"
+          style="--rot:${v.rot}deg;--nudge-y:${v.nudgeY}px;--drift-delay:${v.delay}s;" onclick="openLightbox(${i})">
+          <div class="photo-card__inner">
+            <div class="photo-card__paper">
+              <img loading="lazy" decoding="async" src="${src}" alt="Rahul and Yukta">
+            </div>
+          </div>
+        </figure>`;
+      }).join('');
+    }
+    renderGalleryWall(galleryImages);
+    /* lanterns in footer */
+    const lanternField = document.getElementById('lantern-field');
+    const lanternIcons = ['🏮', '✨'];
+    const lanternCount = isMobile ? 5 : 8;
+    for (let i = 0; i < lanternCount; i++) {
+      const l = document.createElement('div');
+      l.className = 'lantern'; l.textContent = lanternIcons[i % 2];
+      l.style.left = (8 + Math.random() * 84) + '%';
+      l.style.top = (10 + Math.random() * 70) + '%';
+      l.style.animationDelay = (Math.random() * 6) + 's';
+      l.style.animationDuration = (7 + Math.random() * 4) + 's';
+      lanternField.appendChild(l);
+    }
+
+    /* ================= HERO NAME REVEAL ================= */
+    function splitHeroNames() {
+      document.querySelectorAll('#hero-names .name-part').forEach(part => {
+        const text = part.textContent;
+        part.innerHTML = text.split('').map(ch => `<span class="char">${ch}</span>`).join('');
+      });
+    }
+    splitHeroNames();
+
+    /* ================= SCROLL ANIMATIONS (init after intro) ================= */
+    function initScrollAnimations() {
+      gsap.to('#hero .char', {
+        opacity: 1, y: 0, rotate: 0, duration: 1, ease: 'back.out(1.7)',
+        stagger: 0.045, delay: 0.2
+      });
+      gsap.from('.monogram, .hero-sub', {
+        opacity: 0, y: 20, duration: 1, stagger: 0.15, delay: 0.1
+      });
+
+      gsap.utils.toArray('.section').forEach((sec) => {
+        if (sec.id === 'hero') return;
+        gsap.from(sec.querySelectorAll('.eyebrow, h2, .divider, .couple-copy'), {
+          opacity: 0, y: 60, duration: 1, stagger: 0.1, ease: 'power3.out',
+          scrollTrigger: { trigger: sec, start: 'top 75%' }
+        });
+      });
+
+      gsap.from('.event-chapter', {
+        opacity: 0, y: 80, duration: 1, stagger: 0.2, ease: 'power3.out',
+        scrollTrigger: { trigger: '.event-grid', start: 'top 85%' }
+      });
+
+      gsap.utils.toArray('.tl-item').forEach((item) => {
+        gsap.to(item, {
+          opacity: 1, y: 0, duration: 1, ease: 'power3.out',
+          scrollTrigger: { trigger: item, start: 'top 85%' }
+        });
+      });
+
+      gsap.from('.venue-row', {
+        opacity: 0, y: 30, duration: 0.9, stagger: 0.15, ease: 'power2.out',
+        scrollTrigger: { trigger: '.location-card', start: 'top 82%' }
+      });
+
+      gsap.from('.rsvp-card', { opacity: 0, y: 60, duration: 1, scrollTrigger: { trigger: '.rsvp-card', start: 'top 80%' } });
+
+      gsap.to('#hero .bg-content, #hero .scroll-cue', { opacity: 0.15, filter: 'blur(4px)', scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: 1 } });
+
+      ScrollTrigger.refresh();
+    }
+
+    /* ================= GALLERY PHOTO WALL — enter / drift / parallax / touch ================= */
+    function initGalleryWall() {
+      const wall = document.getElementById('photoWall');
+      if (!wall) return;
+      const cards = wall.querySelectorAll('.photo-card');
+      if (!cards.length) return;
+
+      const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      function revealCard(card) {
+        if (card.classList.contains('is-in')) return;
+        card.classList.add('is-in');
+      }
+
+      if (reduceMotion || !('IntersectionObserver' in window)) {
+        cards.forEach(revealCard);
+      } else {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((en) => {
+            if (!en.isIntersecting) return;
+            revealCard(en.target);
+            io.unobserve(en.target);
+          });
+        }, { threshold: 0.14, rootMargin: '0px 0px -6% 0px' });
+        cards.forEach((card) => io.observe(card));
+      }
+
+      /* touch bounce */
+      cards.forEach((card) => {
+        const clearTouch = () => card.classList.remove('is-touched');
+        card.addEventListener('pointerdown', (e) => {
+          if (e.pointerType === 'mouse') return;
+          card.classList.add('is-touched');
+          setTimeout(clearTouch, 560);
+        }, { passive: true });
+      });
+
+      if (reduceMotion) return;
+
+      /* subtle scroll parallax, driven by gsap's ticker so it stays in sync with Lenis */
+      const speeds = [];
+      cards.forEach((card, i) => {
+        const raw = parseFloat(card.getAttribute('data-speed'));
+        speeds[i] = isNaN(raw) ? ((i % 2 === 0) ? 0.04 : -0.03) : raw;
+      });
+
+      let tickerActive = true;
+      function updateParallax() {
+        if (!tickerActive) return;
+        const vh = window.innerHeight || 1;
+        const mid = vh * 0.5;
+        for (let i = 0; i < cards.length; i++) {
+          const card = cards[i];
+          if (!card.classList.contains('is-in')) continue;
+          const rect = card.getBoundingClientRect();
+          if (rect.bottom < -100 || rect.top > vh + 100) continue;
+          let offset = (rect.top + rect.height * 0.5 - mid) * speeds[i];
+          if (offset > 15) offset = 15;
+          if (offset < -15) offset = -15;
+          card.style.setProperty('--parallax-y', offset.toFixed(1) + 'px');
+        }
+      }
+      gsap.ticker.add(updateParallax);
+
+      /* Pause parallax when gallery is out of view to save CPU */
+      const gallery = document.getElementById('gallery');
+      if (gallery) {
+        const galleryObserver = new IntersectionObserver((entries) => {
+          tickerActive = entries[0].isIntersecting;
+        }, { rootMargin: '200px' });
+        galleryObserver.observe(gallery);
+      }
+    }
+    initGalleryWall();
+
+    /* ================= SCRATCH CARD + GOLDEN BURST ================= */
+    const canvas = document.getElementById('scratch-canvas');
+    const ctx = canvas.getContext('2d');
+    const scratchHint = document.getElementById('scratch-hint');
+    function sizeCanvas() {
+      const rect = canvas.parentElement.getBoundingClientRect();
+      canvas.width = rect.width; canvas.height = rect.height;
+      drawScratchSurface();
+    }
+    function drawScratchSurface() {
+      const g = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      g.addColorStop(0, '#E9D6A6'); g.addColorStop(0.5, '#C9A55C'); g.addColorStop(1, '#B8934A');
+      ctx.fillStyle = g;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'rgba(255,255,255,0.85)';
+      ctx.font = '600 15px Poppins, sans-serif';
+      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+      ctx.fillText('✦ SCRATCH HERE ✦', canvas.width / 2, canvas.height / 2 - 10);
+      ctx.font = '400 12px Poppins, sans-serif';
+      ctx.fillText('to reveal our wedding date', canvas.width / 2, canvas.height / 2 + 14);
+    }
+    sizeCanvas();
+    window.addEventListener('resize', sizeCanvas);
+
+    let scratching = false, revealed = false;
+    function getPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      const cx = (e.touches ? e.touches[0].clientX : e.clientX) - rect.left;
+      const cy = (e.touches ? e.touches[0].clientY : e.clientY) - rect.top;
+      return { x: cx, y: cy };
+    }
+    function scratchAt(x, y) {
+      ctx.globalCompositeOperation = 'destination-out';
+      ctx.beginPath();
+      ctx.arc(x, y, 32, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    function goldenBurst() {
+      const wrap = document.querySelector('.scratch-wrap');
+      const rect = wrap.getBoundingClientRect();
+      for (let i = 0; i < 26; i++) {
+        const p = document.createElement('div');
+        p.className = 'burst-particle';
+        p.style.left = rect.left + rect.width / 2 + 'px';
+        p.style.top = rect.top + rect.height / 2 + 'px';
+        document.body.appendChild(p);
+        const angle = Math.random() * Math.PI * 2;
+        const dist = 80 + Math.random() * 160;
+        gsap.to(p, {
+          x: Math.cos(angle) * dist, y: Math.sin(angle) * dist,
+          opacity: 0, scale: 0.3, duration: 1 + Math.random() * 0.6, ease: 'power2.out',
+          onComplete: () => p.remove()
+        });
+      }
+    }
+    function checkRevealed() {
+      if (revealed) return;
+      const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+      let cleared = 0, total = data.length / 4;
+      for (let i = 3; i < data.length; i += 4 * 20) { if (data[i] < 40) cleared++; }
+      const pct = cleared / (total / 20);
+      if (pct > 0.5) {
+        revealed = true;
+        scratchHint.classList.add('done');
+        goldenBurst();
+        gsap.to(canvas, { opacity: 0, duration: 0.8, onComplete: () => canvas.style.display = 'none' });
+      }
+    }
+    canvas.addEventListener('mousedown', e => { scratching = true; const p = getPos(e); scratchAt(p.x, p.y); });
+    canvas.addEventListener('mouseup', () => scratching = false);
+    canvas.addEventListener('mouseleave', () => scratching = false);
+    canvas.addEventListener('mousemove', e => { if (scratching) { const p = getPos(e); scratchAt(p.x, p.y); checkRevealed(); } });
+    canvas.addEventListener('touchstart', e => { scratching = true; const p = getPos(e); scratchAt(p.x, p.y); }, { passive: true });
+    canvas.addEventListener('touchend', () => scratching = false);
+    canvas.addEventListener('touchmove', e => { if (scratching) { const p = getPos(e); scratchAt(p.x, p.y); checkRevealed(); } }, { passive: true });
+
+    /* ================= COUNTDOWN ================= */
+    const weddingDate = new Date('2026-12-26T09:30:00+05:30').getTime();
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = Math.max(0, weddingDate - now);
+      const d = Math.floor(diff / 86400000);
+      const h = Math.floor((diff % 86400000) / 3600000);
+      const m = Math.floor((diff % 3600000) / 60000);
+      const s = Math.floor((diff % 60000) / 1000);
+      document.getElementById('cd-days').textContent = String(d).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(m).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(s).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    /* ================= ICS CALENDAR DOWNLOAD ================= */
+    function downloadICS(which) {
+      let title, desc, loc, start, end;
+      title = 'Rahul & Yukta — Wedding Ceremony';
+      desc = 'Programmes begin 9:30 AM · Sopana Sangeetham 10:00 AM · Marriage before 12:15 PM';
+      loc = 'Vijaya Convention Centre, Thiruvalla, Kerala';
+      start = '20261226T093000'; end = '20261226T121500';
+      const ics = `BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+SUMMARY:${title}
+DESCRIPTION:${desc}
+LOCATION:${loc}
+DTSTART;TZID=Asia/Kolkata:${start}
+DTEND;TZID=Asia/Kolkata:${end}
+END:VEVENT
+END:VCALENDAR`;
+      const blob = new Blob([ics], { type: 'text/calendar' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = which + '-rahul-yukta.ics';
+      link.click();
+    }
+
+    /* ================= EVENT VIDEOS: AUTOPLAY IN VIEW, PAUSE OUT, FULLSCREEN ON CLICK ================= */
+    const eventVideos = document.querySelectorAll('.event-video');
+
+    /* Step 1 — Lazy-load: only fetch when near viewport.
+       Use tighter margin on slow/mobile connections to avoid loading all big files at once. */
+    const isMobileConn = navigator.connection &&
+      (navigator.connection.saveData || /2g|slow-2g/.test(navigator.connection.effectiveType));
+    const loadMargin = isMobileConn ? '100px' : (isMobile ? '200px' : '400px');
+
+    const videoLoadObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const v = entry.target;
+          const src = v.getAttribute('data-src');
+          if (src) {
+            v.src = src;
+            v.removeAttribute('data-src');
+            v.load();
+            /* Once loaded enough, re-trigger play observer by firing a synthetic check */
+            v.addEventListener('canplay', () => {
+              const rect = v.getBoundingClientRect();
+              const ratio = Math.max(0, Math.min(1,
+                (Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0)) / rect.height
+              ));
+              if (ratio >= 0.4 && v.paused) v.play().catch(() => {});
+            }, { once: true });
+          }
+          videoLoadObserver.unobserve(v);
+        }
+      });
+    }, { rootMargin: loadMargin });
+
+    /* Step 2 — Play/Pause when 40% visible */
+    const videoPlayObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const v = entry.target;
+        if (!v.src) return; /* not loaded yet — canplay handler above will pick it up */
+        const shouldPlay = entry.isIntersecting && entry.intersectionRatio >= 0.4;
+        if (shouldPlay && v.paused) {
+          eventVideos.forEach(other => { if (other !== v && !other.paused) other.pause(); });
+          v.play().catch(() => { });
+        } else if (!shouldPlay && !v.paused) {
+          v.pause();
+        }
+      });
+    }, { threshold: [0.4] });
+
+    eventVideos.forEach(v => {
+      const src = v.getAttribute('src');
+      if (src) { v.setAttribute('data-src', src); v.removeAttribute('src'); v.preload = 'none'; }
+      videoLoadObserver.observe(v);
+      videoPlayObserver.observe(v);
+    });
+
+    function goFullscreen(wrap) {
+      const video = wrap.querySelector('video');
+      /* If video hasn't loaded yet (lazy), load it first then fullscreen */
+      if (!video.src && video.getAttribute('data-src')) {
+        video.src = video.getAttribute('data-src');
+        video.removeAttribute('data-src');
+        video.load();
+        video.addEventListener('canplay', () => {
+          _enterFullscreen(video);
+          video.play().catch(() => {});
+        }, { once: true });
+        return;
+      }
+      _enterFullscreen(video);
+      video.play().catch(() => {});
+    }
+    function _enterFullscreen(video) {
+      if (video.requestFullscreen) video.requestFullscreen();
+      else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+      else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+    }
+
+    /* ================= LOCATION: COPY / SHARE ================= */
+    const toast = document.getElementById('copy-toast');
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+    function copyAddress(text) {
+      navigator.clipboard?.writeText(text).then(() => showToast('Address copied'))
+        .catch(() => showToast('Could not copy — please select manually'));
+    }
+    function shareLocation(name, url) {
+      if (navigator.share) {
+        navigator.share({ title: name, url }).catch(() => { });
+      } else {
+        navigator.clipboard?.writeText(url).then(() => showToast('Location link copied'));
+      }
+    }
+    function shareInvite() {
+      if (navigator.share) {
+        navigator.share({ title: 'Rahul & Yukta — Wedding Invitation', url: location.href }).catch(() => { });
+      } else {
+        navigator.clipboard?.writeText(location.href).then(() => showToast('Invitation link copied'));
+      }
+    }
+
+    /* ================= GALLERY LIGHTBOX ================= */
+    const lightboxImages = Array.from(document.querySelectorAll('.photo-tile img')).map(img => ({ src: img.src, alt: img.alt }));
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    let lightboxIndex = 0;
+    function openLightbox(i) {
+      lightboxIndex = i;
+      updateLightboxImage();
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function updateLightboxImage() {
+      const item = lightboxImages[lightboxIndex];
+      lightboxImg.src = item.src;
+      lightboxImg.alt = item.alt;
+    }
+    function lightboxNext() { lightboxIndex = (lightboxIndex + 1) % lightboxImages.length; updateLightboxImage(); }
+    function lightboxPrev() { lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length; updateLightboxImage(); }
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-next').addEventListener('click', lightboxNext);
+    document.getElementById('lightbox-prev').addEventListener('click', lightboxPrev);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('open')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowRight') lightboxNext();
+      if (e.key === 'ArrowLeft') lightboxPrev();
+    });
+
+    /* ================= RSVP FORM ================= */
+    let attendValue = 'yes';
+    function toggleAttend(btn) {
+      document.querySelectorAll('.attend-toggle button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      attendValue = btn.dataset.val;
+    }
+    // Paste your Google Apps Script Web App URL here (see GOOGLE_SHEET_SETUP.md for instructions)
+    const RSVP_ENDPOINT = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE"; // see GOOGLE_SHEET_SETUP.md
+
+    document.getElementById('rsvp-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const entry = {
+        name: document.getElementById('r-name').value,
+        phone: document.getElementById('r-phone').value,
+        guests: document.getElementById('r-guests').value,
+        attending: attendValue,
+        message: document.getElementById('r-message').value,
+        time: new Date().toISOString()
+      };
+
+      // Local backup copy (in case of offline / network issues)
+      const all = JSON.parse(localStorage.getItem('ry_rsvp_list') || '[]');
+      all.push(entry);
+      localStorage.setItem('ry_rsvp_list', JSON.stringify(all));
+
+      const form = this;
+      const submitBtn = form.querySelector('.rsvp-submit');
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting…';
+
+      const finishUp = () => {
+        form.style.display = 'none';
+        document.getElementById('rsvp-success').classList.add('show');
+      };
+
+      if (!RSVP_ENDPOINT || RSVP_ENDPOINT.indexOf('PASTE_YOUR') === 0) {
+        // Endpoint not configured yet — just save locally.
+        finishUp();
+        return;
+      }
+
+      // Apps Script web apps don't send CORS headers back on a simple fetch,
+      // so we use mode:'no-cors'. The request still reaches the script and
+      // gets processed (row added + email sent); we just can't read the response.
+      fetch(RSVP_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(entry)
+      })
+        .catch(err => console.error('RSVP submission error:', err))
+        .finally(() => {
+          submitBtn.disabled = false;
+          submitBtn.textContent = originalBtnText;
+          finishUp();
+        });
+    });
+
+    /* ================= MUSIC PLAYER (shared: floating + footer button) ================= */
+    const player = document.getElementById('player');
+    const footerMusicBtn = document.getElementById('footer-music-btn');
+    const music = document.getElementById('bg-music');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    let playing = false;
+    function toggleMusic() {
+      if (!playing) {
+        music.play().then(() => {
+          playing = true; player.classList.add('playing');
+          iconPlay.style.display = 'none'; iconPause.style.display = 'block';
+          if (footerMusicBtn) footerMusicBtn.textContent = '❚❚ Pause Music';
+        }).catch(() => { showToast('Add music.webm to this folder to enable music'); });
+      } else {
+        music.pause(); playing = false; player.classList.remove('playing');
+        iconPlay.style.display = 'block'; iconPause.style.display = 'none';
+        if (footerMusicBtn) footerMusicBtn.textContent = '♪ Music';
+      }
+    }
+  </script>
+</body>
+
+</html>
