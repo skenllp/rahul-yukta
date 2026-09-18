@@ -60,7 +60,20 @@ browser as a safe fallback. To connect it to your own Google Sheet:
    ```
    and paste your URL in place of the placeholder.
 
-## 5. Haldi section
+## 5. Current placeholder state
+
+Real photos of Rahul & Yukta weren't available for a few spots yet, so for now:
+
+- **Hero background, Save-the-Date background, and Footer background** use generic
+  decorative artwork (no real photos of anyone) instead of a couple photo. Swap
+  `hero-bg.jpg`, `couple-bg.jpg`, and `footer-bg.jpg` for real photos whenever you're ready
+  — same filenames, so no other changes needed.
+- **"Our Moments" gallery section is commented out** (not deleted) in `index.html` — search
+  for `GALLERY ("Our Moments") — TEMPORARILY DISABLED` to find it, and for the matching
+  commented-out `renderGalleryWall(galleryImages);` line further down. Un-comment both once
+  you have photos to show, and list them in the `galleryImages` array as described above.
+
+## 6. Haldi section
 
 No Haldi photos or videos were supplied yet, so that section currently shows a "Family
 Only" badge and a placeholder card. As soon as you have media, add an `<img>`/`<video>`
