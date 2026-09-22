@@ -999,10 +999,18 @@
 
     .photo-wall {
       position: relative;
-      columns: 3;
+      columns: 4;
       column-gap: clamp(18px, 2.8vw, 34px);
       padding: clamp(8px, 2vw, 20px) 0 clamp(20px, 4vw, 48px);
       z-index: 2;
+    }
+
+    .moments-count {
+      margin-top: 4px;
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--champagne-2);
     }
 
     .photo-card {
@@ -1120,6 +1128,69 @@
       object-position: center;
       border-radius: 4px;
       background: rgba(230, 215, 190, .35);
+    }
+
+    /* Editorial "feature" treatment — a heavier gilded frame with corner
+       flourishes, sprinkled through the wall to punctuate the flow like a
+       magazine spread rather than a uniform grid. */
+    .photo-card--feature .photo-card__paper {
+      padding: clamp(12px, 1.8vw, 18px);
+      background: linear-gradient(165deg, rgba(255, 253, 248, .99), rgba(240, 226, 199, .97) 55%, rgba(233, 214, 166, .95));
+      border: 1px solid rgba(184, 147, 74, .75);
+      box-shadow: 0 1px 0 rgba(255, 255, 255, .8) inset, 0 18px 44px -18px rgba(58, 47, 34, .38), 0 3px 12px rgba(184, 147, 74, .12);
+    }
+
+    .photo-card--feature .photo-card__paper::before {
+      inset: 7px;
+      border: 1px solid rgba(184, 147, 74, .42);
+    }
+
+    .photo-card--feature .photo-card__corner {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      z-index: 4;
+      pointer-events: none;
+      opacity: .85;
+    }
+
+    .photo-card--feature .photo-card__corner::before,
+    .photo-card--feature .photo-card__corner::after {
+      content: "";
+      position: absolute;
+      background: linear-gradient(90deg, rgba(184, 147, 74, .9), rgba(184, 147, 74, 0));
+    }
+
+    .photo-card--feature .photo-card__corner::before {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 1.5px;
+    }
+
+    .photo-card--feature .photo-card__corner::after {
+      top: 0;
+      left: 0;
+      width: 1.5px;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(184, 147, 74, .9), rgba(184, 147, 74, 0));
+    }
+
+    .photo-card--feature .photo-card__corner--tl { top: 6px; left: 6px; }
+
+    .photo-card--feature .photo-card__corner--tr {
+      top: 6px; right: 6px; left: auto;
+      transform: scaleX(-1);
+    }
+
+    .photo-card--feature .photo-card__corner--bl {
+      bottom: 6px; left: 6px; top: auto;
+      transform: scaleY(-1);
+    }
+
+    .photo-card--feature .photo-card__corner--br {
+      bottom: 6px; right: 6px; top: auto; left: auto;
+      transform: scale(-1, -1);
     }
 
     @media (hover:hover) and (pointer:fine) {
@@ -1284,6 +1355,12 @@
       }
     }
 
+    @media (max-width:1100px) {
+      .photo-wall {
+        columns: 3;
+      }
+    }
+
     @media (max-width:900px) {
       .photo-wall {
         columns: 2;
@@ -1380,11 +1457,25 @@
       border-radius: 10px;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
       transform: scale(0.94);
-      transition: transform .35s ease;
+      transition: transform .3s ease, opacity .2s ease;
+      touch-action: pan-y;
     }
 
     #lightbox.open img {
       transform: scale(1);
+    }
+
+    #lightbox-counter {
+      position: absolute;
+      bottom: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255, 255, 255, .82);
+      font-size: 13px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-family: inherit;
+      pointer-events: none;
     }
 
     #lightbox-close {
@@ -2168,11 +2259,7 @@
         beginning."</p>
       <p class="schedule-disclaimer">This schedule is not necessarily final and may be updated closer to the day.</p>
     </section>
-    <!-- GALLERY ("Our Moments") — TEMPORARILY DISABLED
-         Photographs haven't been supplied yet. Once they are: drop them into
-         assets/gallery/, list them in the `galleryImages` array in the script
-         below, and remove this comment wrapper (and the matching one around
-         `renderGalleryWall(galleryImages);` further down) to bring the section back.
+    <!-- GALLERY ("Our Moments") -->
     <section id="gallery" class="section" style="min-height:auto;padding-bottom:110px;">
       <div class="gallery-rays" aria-hidden="true"></div>
       <div class="bg-content" style="position:relative;z-index:2;width:100%;">
@@ -2192,12 +2279,11 @@
           </div>
 
           <div class="photo-wall" id="photoWall" aria-label="Wedding photographs">
-            [ generated from the galleryImages data array in the script below ]
+            <!-- generated from the galleryImages data array in the script below -->
           </div>
         </div>
       </div>
     </section>
-    -->
 
     <!-- LIGHTBOX -->
     <div id="lightbox">
@@ -2205,6 +2291,7 @@
       <button id="lightbox-prev" aria-label="Previous">‹</button>
       <img id="lightbox-img" src="" alt="">
       <button id="lightbox-next" aria-label="Next">›</button>
+      <div id="lightbox-counter"></div>
     </div>
 
 
@@ -2484,49 +2571,107 @@
     renderWeddingTimeline(weddingSchedule);
 
     /* ================= EDITABLE DATA: GALLERY IMAGES ================= */
-    /* Add more photographs any time — just append another path to this array. */
+    /* Add more photographs any time — just append another entry to this array.
+       "orient" is optional (portrait/landscape/square); when omitted the
+       layout still works, it just can't size the frame quite as smartly. */
     const galleryImages = [
-      "assets/gallery/photo-01.jpg",
-      "assets/gallery/photo-02.jpg",
-      "assets/gallery/photo-03.jpg",
-      "assets/gallery/photo-04.jpg",
-      "assets/gallery/photo-05.jpg",
-      "assets/gallery/photo-06.jpg",
-      "assets/gallery/photo-07.jpg",
-      "assets/gallery/photo-08.jpg",
-      "assets/gallery/photo-09.jpg",
-      "assets/gallery/photo-10.jpg"
+      { src: "assets/moments/moment-01.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-02.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-03.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-04.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-05.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-06.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-07.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-08.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-09.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-10.jpg", orient: "landscape" },
+      { src: "assets/moments/moment-11.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-12.jpg", orient: "landscape" },
+      { src: "assets/moments/moment-13.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-14.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-15.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-16.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-17.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-18.jpg", orient: "landscape" },
+      { src: "assets/moments/moment-19.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-20.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-21.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-22.jpg", orient: "landscape" },
+      { src: "assets/moments/moment-23.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-24.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-25.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-26.jpg", orient: "landscape" },
+      { src: "assets/moments/moment-27.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-28.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-29.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-30.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-31.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-32.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-33.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-34.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-35.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-36.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-37.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-38.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-39.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-40.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-41.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-42.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-43.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-44.jpg", orient: "portrait" },
+      { src: "assets/moments/moment-45.jpg", orient: "portrait" }
     ];
-    /* repeating style variants so the scattered photo-wall keeps its organic feel
-       no matter how many images are added later */
-    const galleryStyleVariants = [
-      { size: 'lg', enter: 'left', speed: 0.05, rot: -3.2, nudgeY: 14, delay: 0 },
-      { size: 'md', enter: 'right', speed: -0.06, rot: 2.4, nudgeY: -8, delay: .5 },
-      { size: 'sm', enter: 'up', speed: 0.04, rot: -1.8, nudgeY: 10, delay: 1 },
-      { size: 'lg', enter: 'right', speed: -0.05, rot: 3.1, nudgeY: -12, delay: 1.5 },
-      { size: 'md', enter: 'left', speed: 0.06, rot: -2.6, nudgeY: 8, delay: 2 },
-      { size: 'sm', enter: 'up', speed: -0.04, rot: 2.2, nudgeY: -6, delay: .3 },
-      { size: 'lg', enter: 'left', speed: 0.05, rot: -3.6, nudgeY: 12, delay: .8 },
-      { size: 'md', enter: 'right', speed: -0.05, rot: 1.9, nudgeY: -10, delay: 1.8 }
-    ];
+
+    /* rhythm helpers so the scattered wall keeps its organic, editorial feel
+       no matter how many images are added later — sizing responds to each
+       photo's real orientation instead of a blind repeating pattern */
+    const rotCycle = [-3.2, 2.4, -1.8, 3.1, -2.6, 2.2, -3.6, 1.9, -2.1, 2.8, -1.4, 3.4];
+    const enterCycle = ['left', 'right', 'up'];
+    const portraitSizeCycle = ['md', 'sm', 'lg', 'sm', 'md'];
+    const landscapeSizeCycle = ['lg', 'md'];
+
+    function galleryVariant(i, orient) {
+      const size = orient === 'landscape'
+        ? landscapeSizeCycle[Math.floor(i / 2) % landscapeSizeCycle.length]
+        : portraitSizeCycle[i % portraitSizeCycle.length];
+      return {
+        size,
+        enter: enterCycle[i % enterCycle.length],
+        rot: rotCycle[i % rotCycle.length],
+        nudgeY: (i % 2 === 0 ? 1 : -1) * (8 + (i % 5) * 2),
+        delay: (i % 6) * 0.28,
+        speed: (i % 2 === 0 ? 1 : -1) * (0.035 + (i % 4) * 0.008),
+        /* every ~9th frame gets the heavier gilded "feature" treatment so the
+           wall reads like a curated magazine spread rather than a flat grid */
+        feature: (i % 9 === 4)
+      };
+    }
 
     function renderGalleryWall(list) {
       const wall = document.getElementById('photoWall');
       if (!wall) return;
-      wall.innerHTML = list.map((src, i) => {
-        const v = galleryStyleVariants[i % galleryStyleVariants.length];
+      wall.innerHTML = list.map((item, i) => {
+        const src = typeof item === 'string' ? item : item.src;
+        const orient = typeof item === 'string' ? '' : (item.orient || '');
+        const v = galleryVariant(i, orient);
+        const featureCls = v.feature ? ' photo-card--feature' : '';
+        const corners = v.feature ? `
+              <span class="photo-card__corner photo-card__corner--tl" aria-hidden="true"></span>
+              <span class="photo-card__corner photo-card__corner--tr" aria-hidden="true"></span>
+              <span class="photo-card__corner photo-card__corner--bl" aria-hidden="true"></span>
+              <span class="photo-card__corner photo-card__corner--br" aria-hidden="true"></span>` : '';
         return `
-        <figure class="photo-card photo-card--${v.size} photo-tile" data-enter="${v.enter}" data-speed="${v.speed}"
+        <figure class="photo-card photo-card--${v.size}${featureCls} photo-tile" data-enter="${v.enter}" data-speed="${v.speed}"
           style="--rot:${v.rot}deg;--nudge-y:${v.nudgeY}px;--drift-delay:${v.delay}s;" onclick="openLightbox(${i})">
           <div class="photo-card__inner">
             <div class="photo-card__paper">
-              <img loading="lazy" decoding="async" src="${src}" alt="Rahul and Yukta">
+              <img loading="lazy" decoding="async" src="${src}" alt="Rahul and Yukta — a cherished moment together">${corners}
             </div>
           </div>
         </figure>`;
       }).join('');
     }
-    // renderGalleryWall(galleryImages); // disabled until real photographs are supplied — see the commented-out <section id="gallery"> above
+    renderGalleryWall(galleryImages);
     /* lanterns in footer */
     const lanternField = document.getElementById('lantern-field');
     const lanternIcons = ['🏮', '✨'];
@@ -2890,6 +3035,7 @@ END:VCALENDAR`;
     const lightboxImages = Array.from(document.querySelectorAll('.photo-tile img')).map(img => ({ src: img.src, alt: img.alt }));
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCounter = document.getElementById('lightbox-counter');
     let lightboxIndex = 0;
     function openLightbox(i) {
       lightboxIndex = i;
@@ -2903,8 +3049,15 @@ END:VCALENDAR`;
     }
     function updateLightboxImage() {
       const item = lightboxImages[lightboxIndex];
-      lightboxImg.src = item.src;
-      lightboxImg.alt = item.alt;
+      lightboxImg.style.opacity = '0';
+      const swap = () => {
+        lightboxImg.src = item.src;
+        lightboxImg.alt = item.alt;
+        requestAnimationFrame(() => { lightboxImg.style.opacity = '1'; });
+      };
+      // tiny fade so next/prev feels considered rather than an instant jump-cut
+      setTimeout(swap, 90);
+      if (lightboxCounter) lightboxCounter.textContent = `${lightboxIndex + 1} / ${lightboxImages.length}`;
     }
     function lightboxNext() { lightboxIndex = (lightboxIndex + 1) % lightboxImages.length; updateLightboxImage(); }
     function lightboxPrev() { lightboxIndex = (lightboxIndex - 1 + lightboxImages.length) % lightboxImages.length; updateLightboxImage(); }
@@ -2918,6 +3071,26 @@ END:VCALENDAR`;
       if (e.key === 'ArrowRight') lightboxNext();
       if (e.key === 'ArrowLeft') lightboxPrev();
     });
+
+    /* mobile swipe: left/right to navigate, ignores mostly-vertical drags
+       so a scroll/close gesture doesn't accidentally trigger navigation */
+    (function initLightboxSwipe() {
+      let touchStartX = 0, touchStartY = 0, touching = false;
+      lightbox.addEventListener('touchstart', (e) => {
+        if (e.touches.length !== 1) return;
+        touching = true;
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      }, { passive: true });
+      lightbox.addEventListener('touchend', (e) => {
+        if (!touching) return;
+        touching = false;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        const dy = e.changedTouches[0].clientY - touchStartY;
+        if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy) * 1.2) return;
+        if (dx < 0) lightboxNext(); else lightboxPrev();
+      }, { passive: true });
+    })();
 
     /* ================= RSVP FORM ================= */
     let attendValue = 'yes';
