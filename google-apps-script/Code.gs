@@ -1,5 +1,5 @@
 /**
- * RSVP backend for the Jishnu & Vibha wedding site.
+ * RSVP backend for the Rahul & Yukta wedding site.
  *
  * What this does:
  *  1. Receives the RSVP form data (POST request) from index.html
@@ -10,7 +10,7 @@
  */
 
 const SHEET_NAME = "RSVP Responses";
-const NOTIFY_EMAIL = "jishnumud@gmail.com";
+const NOTIFY_EMAIL = "your-email@gmail.com";  // ⚠️ CHANGE THIS to your email address
 
 function doPost(e) {
   try {
@@ -59,7 +59,7 @@ function sendNotificationEmail_(data) {
   const attendingLabel = data.attending === "yes" ? "Joyfully Yes 🎉" : "Regretfully No";
   const subject = `New RSVP from ${data.name || "a guest"} — ${attendingLabel}`;
   const body =
-    "A new RSVP just came in for Jishnu & Vibha's wedding:\n\n" +
+    "A new RSVP just came in for Rahul & Yukta's wedding:\n\n" +
     "Name: " + (data.name || "-") + "\n" +
     "Phone: " + (data.phone || "-") + "\n" +
     "Guests: " + (data.guests || "-") + "\n" +
