@@ -2241,7 +2241,10 @@
         <h2 class="couple-copy names-sm script">Rahul &amp; Yukta</h2>
         <div class="couple-copy">
           <p>With the blessings of the Almighty and our beloved elders <b>Sobha&nbsp;Suresh</b> and <b>A&nbsp;V&nbsp;Suresh&nbsp;Nambiar</b>, joyfully
-            invite you for the marriage of their son <b>Rahul&nbsp;Suresh</b>, grandson of late <b>VV&nbsp;Raghava&nbsp;Poduval</b> & <b>Lekshmi&nbsp;Amma</b> and late <b>U&nbsp;K&nbsp;Kunchirama&nbsp;Poduval</b> & <b>Nalini&nbsp;KV</b>, and <b>Yukta&nbsp;Jain</b>, daughter of <br><b>Lokesh&nbsp;Jain</b> & <b>Ritu&nbsp;Jain</b>.</p>
+            invite you for the marriage of their son <b>Rahul&nbsp;Suresh</b>, grandson of Late <b>VV&nbsp;Raghava&nbsp;Poduval</b> & Late <b>Lekshmi&nbsp;Amma</b> and Late <b>U&nbsp;K&nbsp;Kunchirama&nbsp;Poduval</b> & <b>Nalini&nbsp;KV</b>, and <b>Yukta&nbsp;Jain</b>, daughter of <br><b>Lokesh&nbsp;Jain</b> & <b>Ritu&nbsp;Jain</b>.</p>
+          <p style="margin-top: 24px; font-size: 14.5px; color: var(--ink); font-style: italic;">
+            With best wishes from <b>Raveena&nbsp;Nambiar</b> and all relatives.
+          </p>
         </div>
         <div class="divider"></div>
         <div class="scratch-wrap">
@@ -2254,10 +2257,14 @@
         </div>
         <p class="scratch-hint" id="scratch-hint">Scratch the gold with your cursor or finger</p>
         <div class="savedate-schedule">
-          <span><b>9:30 AM</b> Programmes Begin</span>
-          <span><b>10:00 AM</b> Sopana Sangeetham</span>
-          <span><b>Followed By</b> Dances</span>
+          <span><b>10:00 AM</b> Programme Starts</span>
           <span><b>Before 12:15 PM</b> Marriage</span>
+        </div>
+        
+        <!-- Dance Preview Image -->
+        <div style="margin-top: 30px; max-width: 500px;">
+          <img src="assets/gallery/DANCES.jpeg" alt="Dances and Performances" style="width: 100%; border-radius: 14px; box-shadow: 0 10px 30px rgba(90, 40, 30, 0.2); border: 1px solid rgba(201, 165, 92, 0.3);">
+          <p style="margin-top: 12px; font-size: 13px; color: var(--ink-soft); text-align: center; letter-spacing: 1px;">Featuring cultural dances and performances</p>
         </div>
         
         <!-- RSVP FORM INTEGRATED HERE -->
@@ -2622,9 +2629,7 @@
     /* ================= EDITABLE DATA: WEDDING DAY SCHEDULE ================= */
     /* Add, remove or reorder programme items any time — the timeline rebuilds automatically. */
     const weddingSchedule = [
-      { time: "9:30 AM", title: "Guest Arrival & Gathering" },
-      { time: "10:00 AM", title: "Sopana Sangeetham" },
-      { time: "10:00 AM onwards", title: "Dance Performances" },
+      { time: "10:00 AM", title: "Programme Starts" },
       { time: "Before 12:15 PM", title: "Marriage Ceremony" }
     ];
 
@@ -2670,11 +2675,9 @@
       { src: "assets/moments/moment-22.jpg", orient: "landscape" },
       { src: "assets/moments/moment-23.jpg", orient: "portrait" },
       { src: "assets/moments/moment-24.jpg", orient: "portrait" },
-      { src: "assets/moments/moment-25.jpg", orient: "portrait" },
       { src: "assets/moments/moment-26.jpg", orient: "landscape" },
       { src: "assets/moments/moment-27.jpg", orient: "portrait" },
       { src: "assets/moments/moment-28.jpg", orient: "portrait" },
-      { src: "assets/moments/moment-29.jpg", orient: "portrait" },
       { src: "assets/moments/moment-30.jpg", orient: "portrait" },
       { src: "assets/moments/moment-31.jpg", orient: "portrait" },
       { src: "assets/moments/moment-32.jpg", orient: "portrait" },
@@ -2683,13 +2686,11 @@
       { src: "assets/moments/moment-35.jpg", orient: "portrait" },
       { src: "assets/moments/moment-36.jpg", orient: "portrait" },
       { src: "assets/moments/moment-37.jpg", orient: "portrait" },
-      { src: "assets/moments/moment-38.jpg", orient: "portrait" },
       { src: "assets/moments/moment-39.jpg", orient: "portrait" },
       { src: "assets/moments/moment-40.jpg", orient: "portrait" },
       { src: "assets/moments/moment-41.jpg", orient: "portrait" },
       { src: "assets/moments/moment-42.jpg", orient: "portrait" },
       { src: "assets/moments/moment-43.jpg", orient: "portrait" },
-      { src: "assets/moments/moment-44.jpg", orient: "portrait" },
       { src: "assets/moments/moment-45.jpg", orient: "portrait" }
     ];
 
@@ -2980,9 +2981,9 @@
     function downloadICS(which) {
       let title, desc, loc, start, end;
       title = 'Rahul & Yukta — Wedding Ceremony';
-      desc = 'Programmes begin 9:30 AM · Sopana Sangeetham 10:00 AM · Marriage before 12:15 PM';
+      desc = 'Programme starts 10:00 AM · Marriage before 12:15 PM';
       loc = 'Vijaya Convention Centre, Thiruvalla, Kerala';
-      start = '20261226T093000'; end = '20261226T121500';
+      start = '20261226T100000'; end = '20261226T121500';
       const ics = `BEGIN:VCALENDAR
 VERSION:2.0
 BEGIN:VEVENT
